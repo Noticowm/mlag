@@ -9,7 +9,7 @@
 #'
 #' @return Matriz de correlações.
 #' @export
-correlacao <- function(data, dependent_vars, independent_vars, method="pearson") {
+corMatrix <- function(data, dependent_vars, independent_vars, method="pearson") {
 
   all_vars <- c(dependent_vars, independent_vars)
   if(!all(all_vars %in% names(data))) {
@@ -41,7 +41,8 @@ correlacao <- function(data, dependent_vars, independent_vars, method="pearson")
 #'
 #' @return Data frame com as colunas de lags adicionadas.
 #' @export
-lag_comp<-function(data, lags, var){
+#'
+Lag <-function(data, lags, var){
 
   lag_var<-lapply(1:lags,function(x){dplyr::lag(data[,var],x)})
   lagged_data<-do.call(cbind, lag_var)
@@ -61,7 +62,7 @@ lag_comp<-function(data, lags, var){
 #'
 #' @return Data frame com a coluna da média móvel adicionada.
 #' @export
-media_movel <- function(data, var, k) {
+mean <- function(data, var, k) {
 
   if (!var %in% names(data)) {
     stop("A variável especificada não está presente na base de dados.")
