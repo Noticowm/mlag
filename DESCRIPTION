@@ -1,0 +1,10 @@
+Package: mlag
+Type: Package
+Title: Pacote para Análise de Média Móvel, Defasagem e Correlações
+Version: 1.1.0
+Author: Paulo Notiço
+Maintainer: Paulo Notiço <paulonotico2050@gmail.com>
+Description: O pacote 'mlag' fornece funções para a análise de médias móveis, criação de defasagens (lags) e cálculo de correlações entre variáveis.
+License: GPL-3
+Imports: gamlss, rio, janitor, dplyr, zoo, formattable, ggplot2, scales, lubridate, patchwork
+RoxygenNote: 7.3.2

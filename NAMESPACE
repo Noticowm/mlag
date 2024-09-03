@@ -1,0 +1,4 @@
+export(correlacao)
+export(lag_comp)
+export(media_movel)
+export(agregar_por_ano_mes)
